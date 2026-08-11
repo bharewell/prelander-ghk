@@ -3,11 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/bharewell/prelander-ghk@main/hf_20260808_195726_f75bf755-3816-4a3d-9eb4-80313d0e6d45.webp" type="image/webp" fetchpriority="high"/>
-<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/bharewell/prelander-ghk@main/hf_20260808_212713_98e4d4ff-cbe8-45a2-a006-271542508faf.webp" type="image/webp"/>
-<link rel="preload" as="image" href="https://cdn.jsdelivr.net/gh/bharewell/prelander-ghk@main/hf_20260808_224628_c774fbaf-5a34-40d3-9569-ac1c7e18cd31.webp" type="image/webp"/>
-<link rel="preload" as="image" href="https://litter.catbox.moe/qllw4l.webp" type="image/webp"/>
-<title>How I Softened Crow’s Feet at 49 | bhare</title>
+<title>Loading…</title>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -26,5 +22,22 @@ src="https://www.facebook.com/tr?id=2830970760608679&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 </head>
-<body><p>PIXEL TEST - RESTORING FULL PAGE NEXT</p></body>
+<body>
+<script>
+(function(){
+  var src = 'https://cdn.jsdelivr.net/gh/bharewell/prelander-ghk@43e896f2f8ab0882f66db0cbf468281cd9505d0b/index.html';
+  fetch(src + '?t=' + Date.now()).then(function(r){return r.text()}).then(function(html){
+    if (html.indexOf('2830970760608679') === -1) {
+      var pixel = '<!-- Meta Pixel Code -->\n<script>\n!function(f,b,e,v,n,t,s)\n{if(f.fbq)return;n=f.fbq=function(){n.callMethod?\nn.callMethod.apply(n,arguments):n.queue.push(arguments)};\nif(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version=\'2.0\';\nn.queue=[];t=b.createElement(e);t.async=!0;\nt.src=v;s=b.getElementsByTagName(e)[0];\ns.parentNode.insertBefore(t,s)}(window, document,\'script\',\n\'https://connect.facebook.net/en_US/fbevents.js\');\nfbq(\'init\', \'2830970760608679\');\nfbq(\'track\', \'PageView\');\n<\/script>\n<noscript><img height="1" width="1" style="display:none"\nsrc="https://www.facebook.com/tr?id=2830970760608679&ev=PageView&noscript=1"\n/><\/noscript>\n<!-- End Meta Pixel Code -->\n';
+      html = html.replace(/<\/head>/i, pixel + '</head>');
+    }
+    document.open();
+    document.write(html);
+    document.close();
+  }).catch(function(){
+    document.body.innerHTML = '<p style="font-family:sans-serif;padding:40px">Please refresh.</p>';
+  });
+})();
+</script>
+</body>
 </html>
