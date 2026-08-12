@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Loading…</title>
+<title>How I Softened Crow's Feet at 49 | bhare</title>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -25,8 +25,11 @@ src="https://www.facebook.com/tr?id=2830970760608679&ev=PageView&noscript=1"
 <body>
 <script>
 (function(){
-  var src = 'https://cdn.jsdelivr.net/gh/bharewell/prelander-ghk@43e896f2f8ab0882f66db0cbf468281cd9505d0b/index.html';
-  fetch(src + '?t=' + Date.now()).then(function(r){return r.text()}).then(function(html){
+  var src = 'https://cdn.jsdelivr.net/gh/bharewell/prelander-ghk@ae3526e7c6fc6d94bca24ba13c037809f18b9ab2/index.html';
+  fetch(src + '?t=' + Date.now()).then(function(r){
+    if(!r.ok) throw new Error('load failed');
+    return r.text();
+  }).then(function(html){
     if (html.indexOf('2830970760608679') === -1) {
       var pixel = '<!-- Meta Pixel Code -->\n<script>\n!function(f,b,e,v,n,t,s)\n{if(f.fbq)return;n=f.fbq=function(){n.callMethod?\nn.callMethod.apply(n,arguments):n.queue.push(arguments)};\nif(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version=\'2.0\';\nn.queue=[];t=b.createElement(e);t.async=!0;\nt.src=v;s=b.getElementsByTagName(e)[0];\ns.parentNode.insertBefore(t,s)}(window, document,\'script\',\n\'https://connect.facebook.net/en_US/fbevents.js\');\nfbq(\'init\', \'2830970760608679\');\nfbq(\'track\', \'PageView\');\n<\/script>\n<noscript><img height="1" width="1" style="display:none"\nsrc="https://www.facebook.com/tr?id=2830970760608679&ev=PageView&noscript=1"\n/><\/noscript>\n<!-- End Meta Pixel Code -->\n';
       html = html.replace(/<\/head>/i, pixel + '</head>');
@@ -35,7 +38,7 @@ src="https://www.facebook.com/tr?id=2830970760608679&ev=PageView&noscript=1"
     document.write(html);
     document.close();
   }).catch(function(){
-    document.body.innerHTML = '<p style="font-family:sans-serif;padding:40px">Please refresh.</p>';
+    document.body.innerHTML = '<p style="font-family:sans-serif;padding:40px;max-width:480px;margin:40px auto;line-height:1.5">Unable to load the page. Please refresh.</p>';
   });
 })();
 </script>
